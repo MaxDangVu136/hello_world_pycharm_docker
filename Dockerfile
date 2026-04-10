@@ -5,6 +5,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies including PyCharm requirements and Python 3.9
+# PyCharm needs OpenGL support
 RUN apt-get update && apt-get install -y software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update && apt-get install -y \
@@ -25,6 +26,8 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     fontconfig \
     fonts-liberation \
     python3.9-tk \
+    libgl1 \
+    libglib2.0-0 \
     && curl -sS https://bootstrap.pypa.io/get-pip.py | python3.9 \
     && rm -rf /var/lib/apt/lists/*
 
