@@ -1,0 +1,24 @@
+services:
+  pycharm:
+    build: .
+    image: pycharm-ide
+    container_name: pycharm
+    environment:
+      - DISPLAY=host.docker.internal:0
+      - XAUTHORITY=${XAUTHORITY:-/tmp/.X11-unix}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      # X11 Socket for Display Forwarding
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
+      # Persistence: Projects Directory
+      - ./projects:/home/developer/projects
+
+      # Persistence: PyCharm Config, Local Share, and Cache
+      - ./pycharm-data/pycharm-config:/home/developer/.config/JetBrains
+      - ./pycharm-data/pycharm-local:/home/developer/.local/share/JetBrains
+      - ./pycharm-data/pycharm-cache:/home/developer/.cache/JetBrains
+
+    # Remove network_mode host as it's not supported correctly on Windows
+    # network_mode: host
