@@ -43,7 +43,11 @@ RUN wget -qO /tmp/pycharm.tar.gz https://download.jetbrains.com/python/pycharm-c
     chown -R developer:developer /opt/pycharm
 
 # Pre-create config directory to avoid permission issues, and set proper ownership
-RUN mkdir -p /home/developer/.config/matplotlib && \
+RUN mkdir -p /home/developer/.config/matplotlib \
+    /home/developer/.cache/mesa_shader_cache \
+    /home/developer/.cache/JetBrains \
+    /home/developer/.local/share/JetBrains \
+    /home/developer/.config/JetBrains && \
     chown -R developer:developer /home/developer
 
 # Configure user
