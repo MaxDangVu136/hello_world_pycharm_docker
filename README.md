@@ -1,18 +1,15 @@
 #   Running Pycharm IDE in a Docker container
 Example template for running and debugging older versions of Python code with Docker.
 
-##  To-do
-- [x]  Add license
-
 ## License
 This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ##  Dependencies
-*  Working internet/WiFi connection
+*  Working internet or WiFi connection
 *  Host machine operating system: Windows 11
 *  Docker container base: Ubuntu 24.04 
 *  Python version: [3.9](https://www.python.org/downloads/release/python-3925/)
-*  Example project repository: contains all scripts and function files of your project (e.g. under the [/projects] directory).
+*  Example project repository: contains all scripts and function files of your project (e.g. under the `/projects` directory).
 *  `requirements.txt`: file storing all Python modules and respective versions to create a virtual environment for your project.
 *  [VcXsrv X11 server on Windows](https://sourceforge.net/projects/vcxsrv/): enables the visualisation of GUI programs, running inside the Docker container, on the host Windows machine.
 *  [Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/): build, run and share Docker containers. 
