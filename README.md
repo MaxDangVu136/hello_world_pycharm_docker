@@ -28,3 +28,8 @@ This project is licensed under the Apache License, Version 2.0 - see the [LICENS
    This should load a Pycharm IDE inside the Docker container like below:
    ![docs/pycharm_inside_docker.png](docs/pycharm_inside_docker.png)
 6. Set up, run and edit your code as you would in your local Pycharm IDE. Note that the changes made in the Docker container will sync with your local folder.  
+
+Running this code should give you the following outputs:
+<img src="docs/print_output.png" alt="docs/print_output.png" width="80%">
+<img src="docs/matplotlib_output.png" alt="docs/matplotlib_putput.png" width="90%">
+<img src="docs/pyvista_output.png" alt="docs/pyvista_output.png" width="90%">
