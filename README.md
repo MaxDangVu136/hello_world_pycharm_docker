@@ -18,7 +18,7 @@ This project is licensed under the Apache License, Version 2.0 - see the [LICENS
 
 ##  Instructions
 1. Download a copy of this repository.
-2. Download, install, and run VcXsrv on your host machine to turn on X11 forwarding. For the specific setup instructions, please refer to steps 1-3 of [this link](https://opencmiss-iron-tutorials.readthedocs.io/en/latest/faq/docker/setup_vcxsrv_x11_server_windows.html).  
+2. Download, install, and run VcXsrv on your host machine to turn on X11 forwarding. For the specific setup instructions, please refer to steps 1-3 of [this link](https://opencmiss-iron-tutorials.readthedocs.io/en/latest/faq/docker/setup_vcxsrv_x11_server_windows.html). To render Pyvista windows, please UNCHECK the box that says Native opengl on the Extra settings screen. (It defaults to checked, which passes pure, unsupported OpenGL commands and crashes it. Unchecking it tells Windows to capture things as a flat 2D image without requiring identical hardware handshakes.)  
 3. Open `Docker Desktop.exe` and make sure that it is running in the background.
 4. In a command line terminal, navigate to the directory containing `Dockerfile` and `docker-compose.yml`.
 5. Run the following commands:
